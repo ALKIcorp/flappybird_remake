@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>FlappyBird</string>
+	<key>CFBundleExecutable</key>
+	<string>FlappyBird</string>
+	<key>CFBundleIconFile</key>
+	<string>icon-windowed.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.alkicorp.flappybird</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>FlappyBird</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.13.0</string>
+	<key>NSHighResolutionCapable</key>
+	<string>True</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2024 ALKI Corp</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
