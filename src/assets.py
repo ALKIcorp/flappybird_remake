@@ -14,6 +14,17 @@ class AssetManager:
         self.score_images = {}
         self.bird_variants = []
         
+    def _get_resource_path(self, relative_path):
+        """Get absolute path to resource, works for dev and for PyInstaller"""
+        try:
+            # PyInstaller creates a temp folder and stores path in _MEIPASS
+            base_path = sys._MEIPASS
+        except Exception:
+            # Running as script, use current directory
+            base_path = os.path.abspath(".")
+        
+        return os.path.join(base_path, relative_path)
+        
     def load_assets(self):
         self.bg_surface = self.load_asset('background-day.png')
         self.base_surface = self.load_asset('base.png')
@@ -29,7 +40,7 @@ class AssetManager:
         self.bird_variants = self.create_bird_variants()
 
     def load_asset(self, name):
-        path = os.path.join('assets', name)
+        path = self._get_resource_path(os.path.join('assets', name))
         if not os.path.exists(path):
             print(f"Error: Could not find asset {path}")
             sys.exit()
@@ -42,7 +53,7 @@ class AssetManager:
         return pygame.image.fromstring(image_data, image_size, 'RGBA').convert()
 
     def load_asset_alpha(self, name, return_pil=False):
-        path = os.path.join('assets', name)
+        path = self._get_resource_path(os.path.join('assets', name))
         if not os.path.exists(path):
             print(f"Error: Could not find asset {path}")
             sys.exit()
